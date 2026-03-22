@@ -5,3 +5,9 @@ function myFunction(){
 }
 
 myFunction();
+
+// with parameter
+function Function (name){
+    console.log(name);
+}
+Function("Sushant");// pass the argument
