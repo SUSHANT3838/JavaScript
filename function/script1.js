@@ -18,3 +18,10 @@ function add (a, b){
 };
 let result = add(5,6); // storing addition in the variabe
 console.log(result); // printing the result
+
+// default parameter of function
+function greet(name = "Guest"){
+    console.log("Hello, " + name);
+}
+greet(); // Default name -> Guest 
+greet("Sushant"); // Assigned name -> sushant
