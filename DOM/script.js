@@ -7,7 +7,9 @@ for(div of divs){
     console.log(divs[idx]);
     idx++;
 }
+// let div = divs[0] = "Hello my name is sushant shete";
+// console.log(div);
 
-let heding = document.querySelector("h1");
-heding.innerText = heding.innerText + " to my website";
-console.log(heding);
+let heading = document.querySelector("h1");
+heading.innerText = heading.innerText + " to my website";
+console.log(heading);
