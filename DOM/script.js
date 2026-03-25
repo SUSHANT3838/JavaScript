@@ -13,3 +13,9 @@ for(div of divs){
 let heading = document.querySelector("h1");
 heading.innerText = heading.innerText + " to my website";
 console.log(heading);
+
+let div1 = document.querySelector(".box");
+console.log(div1);
+
+let para = document.querySelector("para");
+console.log(para.getAttribute("para"));
