@@ -26,7 +26,7 @@ body::before{
     background-size: cover;
     background-position: center;
     opacity: 0.5;
-    z-index: -1;
+    z-index: -2;
     pointer-events: none;
 }
 
@@ -190,10 +190,11 @@ a{
     background-color: rgba(255, 255, 255, 0.12);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-start;
     text-align: center;
     transition: background-color 0.5s, color 0.5s;
+    gap: 8px;
 }
 
 .item:hover{
@@ -207,6 +208,25 @@ a{
     height: auto;
     aspect-ratio: 1 / 1;
     object-fit: contain;
+    align-self: center;
+}
+
+.item h2{
+    margin: 4px 0 0;
+}
+
+.item p{
+    margin: 4px 0;
+}
+
+.price-line,
+.total-line{
+    margin: 6px 0;
+    font-weight: 600;
+}
+
+.total-line{
+    font-weight: 700;
 }
 
 .qty-controls{
@@ -215,21 +235,58 @@ a{
     justify-content: center;
     gap: 10px;
     margin: 10px 0;
+    width: 100%;
 }
 
 .qty-btn{
     height: 36px;
     width: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.15s, background-color 0.15s;
+}
+
+.qty-btn:hover{
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.qty-btn:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .qty-input{
     width: 48px;
     text-align: center;
     height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 10px;
 }
 
 .cart-btn{
     margin-top: auto;
+    width: 100%;
+}
+
+.cart-btn button{
+    min-height: 40px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+    transition: transform 0.2s, background-color 0.2s;
+    width: 100%;
+}
+
+.cart-btn button:hover{
+    transform: translateY(-1px);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 /* footer */
