@@ -289,7 +289,7 @@ a{
 }
 
 .cart-btn button:hover{
-    transform: translateY(1.03PX);
+    transform: translateY(1.03);
     background-color: #5A3FFF;
 }
 

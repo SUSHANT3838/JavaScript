@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: #2f2f2f;
+    color: #f4f4f4;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.page {
+    width: min(92vw, 380px);
+}
+
+.title {
+    margin: 0 0 14px;
+    text-align: center;
+    font-size: clamp(26px, 5vw, 38px);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.calculator {
+    background: #1f1f1f;
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.display {
+    padding: 10px;
+    border-radius: 14px;
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 12px;
+}
+
+.display__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 700;
+    text-align: right;
+    padding: 6px 2px;
+}
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.key {
+    border: none;
+    border-radius: 14px;
+    min-height: 54px;
+    font-size: 20px;
+    font-weight: 650;
+    color: #f4f4f4;
+    background: #2c2c2c;
+    cursor: pointer;
+    transition: transform 0.04s ease;
+}
+
+.key:active {
+    transform: scale(0.98);
+}
+
+.key:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.55);
+    outline-offset: 2px;
+}
+
+.key--utility {
+    background: #3b3b3b;
+}
+
+.key--op {
+    background: #4a3a2a;
+}
+
+.key--equals {
+    background: #1f5c4d;
+}
+
+.key--wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 360px) {
+    .calculator {
+        padding: 12px;
+    }
+
+    .keys {
+        gap: 8px;
+    }
+
+    .key {
+        min-height: 48px;
+        font-size: 18px;
+        border-radius: 12px;
+    }
+}
