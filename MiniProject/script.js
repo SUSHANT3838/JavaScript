@@ -19,7 +19,7 @@ function displayProducts() {
     container.innerHTML = "";
     products.forEach(product => {
         container.innerHTML += `
-        <div id="btn" class="card">
+        <div class="card">
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
             <p> Price : Rs. ${product.price} </p>
@@ -61,7 +61,7 @@ function renderCart() {
     container.innerHTML = "";
     cart.forEach(item => {
         container.innerHTML += `
-        <div  class="card" id="btn">
+        <div class="card">
             <h4>${item.name}</h4>
             <img src="${item.image}" alt="${item.name}" width="100">
             <p> Price : Rs. ${item.price} </p>
